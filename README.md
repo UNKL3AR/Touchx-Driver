@@ -3,6 +3,10 @@ USB version
 
 ### 状态指示灯：
 
+参考链接：
+
+https://zhuanlan.zhihu.com/p/481123867
+
 | 颜色 | 持续绿色 | 闪烁绿色 | 闪烁黄色       | 持续黄色       |
 | ---- | -------- | -------- | -------------- | -------------- |
 | 意义 | 正确校准 | 等待校准 | 等待重启和开机 | 待机或等待状态 |
@@ -11,11 +15,15 @@ USB version
 
 ### 安装驱动：
 
-参考原文链接：
+安装参考链接：
 
 https://blog.csdn.net/zp1127zp/article/details/108532045
 
-官方链接：
+https://github.com/bharatm11/Geomagic_Touch_ROS_Drivers
+
+https://fsuarez6.github.io/projects/geomagic-touch-in-ros/
+
+官方驱动链接：
 
 https://support.3dsystems.com/s/article/OpenHaptics-for-Linux-Developer-Edition-v34?language=en_US
 
@@ -37,15 +45,15 @@ sudo ./install
 
 另外一个压缩包是名为(TouchDriver+日期)的驱动
 
-根据文件installation+Instructions_2022.pdf文件内容进行安装
+根据文件`installation+Instructions_2022.pdf`文件内容进行安装
 
 #### step1-2 
 
-注意sudo权限问题；
+注意sudo权限问题。
 
 #### step3 
 
-一般高版本ubuntu自带qt；
+一般高版本ubuntu自带qt。
 
 #### step4-6 
 
@@ -57,7 +65,7 @@ sudo ./install
 GTDD_HOME="/usr/share/3DSystems"
 ```
 
-环境变量的生效需要先注销再重新登入ubuntu系统；
+环境变量的生效需要先注销再重新登入ubuntu系统。
 
 #### step7 
 
@@ -73,7 +81,7 @@ sudo ./Touch_Setup
 
 注意要sudo权限，不然会没法把结果保存到step4-6的config中。
 
-这个程序运行后会出现一个界面，确认设备号和驱动版本有显示后，我们点击"apply"和"ok"。
+这个程序运行后会出现一个界面，确认设备号和驱动版本有显示后，点击"apply"与"ok"。
 
 接着运行
 
@@ -82,4 +90,3 @@ sudo ./Touch_Diagnostic
 ```
 
 对Touch进行标定。前述步骤都没问题的话，这个程序可以正常运行并实时显示Touch的状态。如果出现找不到设备的状态，请确认端口权限给了，然后是否是sudo运行的Touch_Setup。
-
